@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body {
-    max-width: 1930px;
     font-size: 13px;
     line-height: 1.4;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -12,6 +11,7 @@ h4 {
     margin: 0;
 }
 .grid-container {
+    max-width: 1930px;
     padding: 7% 11% 3%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -86,7 +86,7 @@ img {
 
 
 /* mobile */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .grid-container {
         width: 100%;
         padding: 50px 20px;
@@ -97,3 +97,20 @@ img {
         padding: 30px;
     }
 }
+@media only screen and (max-width: 991px) {
+    .grid-container {
+      padding: 40px 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .daniel {
+        grid-column: auto;
+    }
+    .kira{
+        grid-area: auto;
+    }
+    .patrick {
+        grid-area: 3/1/4/3;
+        
+    }
+}
+
